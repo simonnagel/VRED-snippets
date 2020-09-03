@@ -15,4 +15,4 @@ Accordingly, those configuration samples are provided “as is” with no warran
 mat = findMaterial("Studio")
 
 
-vrFieldAccess(mat.fields().setReal32("exposure",3))
+mat.fields().setReal32("exposure",3)
