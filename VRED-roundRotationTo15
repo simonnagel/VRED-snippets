@@ -1,0 +1,18 @@
+import math
+
+def roundup(x):
+    return int(math.ceil(x / 15.0)) * 15
+
+timer = vrTimer()
+
+node = findNode("Box")
+
+def rot():
+    oldRot = node.getRotation()
+    
+    node.setRotation(roundup(oldRot[0]),roundup(oldRot[1]), roundup(oldRot[2]))
+    print (roundup(oldRot[0]),roundup(oldRot[1]), roundup(oldRot[2]))
+    
+
+timer.connect(rot)
+timer.setActive(1)
