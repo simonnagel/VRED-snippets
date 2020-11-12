@@ -10,9 +10,12 @@ Accordingly, those configuration samples are provided “as is” with no warran
 
 
 #Change the value of the Exposure of an Environment via Python
+#Change the value of the Rotation of an Environment via Python
 
 
 mat = findMaterial("Studio")
 
 
 mat.fields().setReal32("exposure",3)
+
+mat.fields().setVec3f("rotate",0,60,0)
