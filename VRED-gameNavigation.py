@@ -91,10 +91,7 @@ def setHumanHeight():
     global camPos
     camPos = cam.getTranslation()
     camPosWorld = cam.getWorldTransform
-    global collisionDistanceFront
-    global collisionDistanceBack   
-    global collisionDistanceRight
-    global collisionDistanceLeft
+
     #get the distance to ground
     rayOrigin = Pnt3f(camPos[0],camPos[1],camPos[2])
     rayDirection = Vec3f(0,0,-1)
