@@ -57,25 +57,25 @@ def isKeyPressed():
         camRotFunc(-5)
         active = 0     
     if keyboard.is_pressed('w'):
-        if collisionDistanceFront> 500:
-            setCameraZoom(-speedForward)
-            y = 1
-            active = 1
+
+        setCameraZoom(-speedForward)
+        y = 1
+        active = 1
     if keyboard.is_pressed('s'):
-        if collisionDistanceBack> 500:
-            setCameraZoom(speedForward)
-            y = -1
-            active = 1
+
+        setCameraZoom(speedForward)
+        y = -1
+        active = 1
     if keyboard.is_pressed('a'):
-        if collisionDistanceLeft> 500:
-            setCameraPanning(speedSideward, 0)
-            x = 1
-            active = 1
+
+        setCameraPanning(speedSideward, 0)
+        x = 1
+        active = 1
     if keyboard.is_pressed('d'):
-        if collisionDistanceRight> 500:
-            setCameraPanning(-speedSideward, 0)
-            x =-1
-            active = 1
+
+        setCameraPanning(-speedSideward, 0)
+        x =-1
+        active = 1
     if keyboard.is_pressed('x'):  
         setCameraZoom(-10)    
     if active == 1:
@@ -109,20 +109,17 @@ def setHumanHeight():
     interPosCollisionFront = intersectionFront[1]
     y = (interPosCollisionFront.x(), interPosCollisionFront.y(), interPosCollisionFront.z())
     collisionDistanceFront = math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))
-
     #get the distance to back
     rayDirectionBack = Vec3f(1,0,0)
     intersectionBack = getSceneIntersection(-1, rayOrigin, rayDirectionBack)
     interPosCollisionBack = intersectionBack[1]
     y = (interPosCollisionBack.x(), interPosCollisionBack.y(), interPosCollisionBack.z())
     collisionDistanceBack = math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))     
-
     rayDirectionLeft = Vec3f(0,1,0)
     intersectionLeft = getSceneIntersection(-1, rayOrigin, rayDirectionLeft)
     interPosCollisionLeft = intersectionLeft[1]
     y = (interPosCollisionLeft.x(), interPosCollisionLeft.y(), interPosCollisionLeft.z())
     collisionDistanceLeft = math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))    
-
     rayDirectionRight = Vec3f(0,-1,0)
     intersectionRight = getSceneIntersection(-1, rayOrigin, rayDirectionRight)
     interPosCollisionRight = intersectionRight[1]
@@ -131,7 +128,6 @@ def setHumanHeight():
             
     print collisionDistanceFront
     
-
     interPosList = []
     for i in range(7):
         rayDirection = Vec3f(-(i-3)*0.1,0,-1)
@@ -139,7 +135,6 @@ def setHumanHeight():
         interPos = intersection[1]
         bestInterPos =interPos.z()
         interPosList.insert(i,interPos.z())
-
     listCheckDuplicate = [x for x in interPosList if interPosList.count(x) > 1]
     if len(listCheckDuplicate) == 0:
         #print("the floor is not even")
