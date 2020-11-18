@@ -39,11 +39,7 @@ cam = getActiveCameraNode()
 def isKeyPressed():
     global cam
     global camPos
-    global collisionDistanceFront
-    #print collisionDistanceFront
-    global collisionDistanceBack
-    global collisionDistanceRight
-    global collisionDistanceLeft
+
     setNavigationSpeedMode(2)
     x = 0
     y = 0
