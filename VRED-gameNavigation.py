@@ -2,9 +2,6 @@
 #press Q and E to rotate
 #use mouse for change view
 
-# press M to make movement faster
-# press N to make movement slower
-
 # know bugs
 # cannot press Q,E at the same time as W,A,S,D
 # if pressed W too long and going "upwards" camera goes back on ground
