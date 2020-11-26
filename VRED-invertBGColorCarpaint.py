@@ -1,9 +1,12 @@
+## This script will make your Background in the opposite color of your scene
+
 ## Create a Sphere called "BG" and apply a Material call "BG"
 ## Change its diffuse and glossy color to black
 
 # Create a switch material an apply to your main object. call it "Carpaint Switch"
 #of course you can change names in the switch
 
+timer = vrTimer()
 
 switchmat = findMaterial("Carpaint Switch")
 bgMat = findMaterial("BG")
@@ -36,3 +39,6 @@ def colorCalc(color):
         newColor = 0.975
     '''
     return newColor
+
+timer.connect(matchBGColorToPaint) 
+timer.setActive(1)
