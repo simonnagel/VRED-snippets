@@ -25,3 +25,5 @@ vrSessionService.sendPython('node = vrNodeService.findNode("Perspective")')
 
 globalPos =  node.getWorldTransform()
 vrSessionService.sendPython('node.setWorldTransform('+str(globalPos)+')')
+
+
