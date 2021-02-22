@@ -27,3 +27,21 @@ globalPos =  node.getWorldTransform()
 vrSessionService.sendPython('node.setWorldTransform('+str(globalPos)+')')
 
 
+
+'''
+#This script will only sync position and RotateZ
+QVector3D = PySide2.QtGui.QVector3D
+
+node = vrNodeService.findNode("Perspective")
+vrSessionService.sendPython('node = vrNodeService.findNode("Perspective")') 
+
+
+globalRot = node.getRotationAsEuler()
+globalPos = node.getWorldTranslation()
+
+vrSessionService.sendPython('oldRot = node.getRotationAsEuler()')
+
+vrSessionService.sendPython('node.setRotationAsEuler(QVector3D(oldRot.x(),oldRot.y(),'+str(globalRot.z())+'))')
+vrSessionService.sendPython('node.setWorldTranslation('+str(globalPos)+')')
+
+'''
