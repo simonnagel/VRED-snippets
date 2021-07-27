@@ -34,13 +34,14 @@ setPositionToPivot()
 
 arrayoftime=[0,0]
 
-speed = 10
+speed = 200
 
 def animation():
-    time = (getCurrentFrame()/speed)
+    time = (getCurrentFrame()+speed)/speed
+    #print time
     if time < 1:
         time = 1
-
+    
     arrayoftime.append(time)
     #print arrayoftime
     if len(arrayoftime)>0:
@@ -49,7 +50,7 @@ def animation():
             #print(time)
 
             for i in range(len(nodes)):           
-                
+                #pass
                 setTransformNodeTranslation(nodes[i],BBCenterList[i].x()*time,BBCenterList[i].y()*time,BBCenterList[i].z()*time,0)
                 
         
