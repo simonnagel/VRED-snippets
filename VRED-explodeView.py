@@ -7,10 +7,13 @@ This also applies to GitHub "Release" versions.
 Neither Simon Nagel, nor Autodesk represents that these samples are reliable, accurate, complete, or otherwise valid. 
 Accordingly, those configuration samples are provided ?as is? with no warranty of any kind and you use the applications at your own risk.
 Scripted by Simon Nagel
+
+
 How to use:
-Select all NOdes that should move over time.
+Select RoOtNode of Geometry
 Unshare Subtree
 Flush Transformation
+Select all NOdes that should move over time.
 Execute Script
 Scroll through timeline.
 '''
